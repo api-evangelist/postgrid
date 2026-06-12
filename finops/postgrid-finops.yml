@@ -1,0 +1,173 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+provider: PostGrid
+providerId: postgrid
+created: '2026-06-12'
+modified: '2026-06-12'
+
+billingModel: hybrid
+description: >-
+  PostGrid uses a hybrid billing model combining per-piece usage billing (for
+  the Print & Mail API) and subscription-plus-overage billing (for Address
+  Verification APIs). Costs are composed of a platform/API access fee,
+  per-piece production and postage fees, and per-lookup verification fees.
+  Annual subscriptions provide a 10% discount. Enterprise accounts negotiate
+  custom rates.
+
+focusColumns:
+  - ChargeCategory
+  - ServiceName
+  - ServiceSubcategory
+  - ResourceType
+  - UsageQuantity
+  - UsageUnit
+  - ListUnitPrice
+  - BilledCurrency
+  - BillingPeriod
+
+meters:
+
+  - name: PrintMailPiece
+    description: Per-piece charge for printing and mailing a letter, postcard, check, or self-mailer
+    unit: piece
+    serviceCategory: Print & Mail
+    dimensions:
+      - mailType
+      - mailClass
+      - colorOption
+      - country
+    samplePrices:
+      - dimension: B&W Letter, First Class, USA
+        price: 1.019
+        currency: USD
+      - dimension: Color Letter, First Class, USA
+        price: 1.179
+        currency: USD
+      - dimension: 4x6 Postcard, First Class, USA
+        price: 0.862
+        currency: USD
+      - dimension: Check, USA
+        price: 1.10
+        currency: USD
+      - dimension: Certified Mail, USA
+        price: 6.69
+        currency: USD
+      - dimension: Express Delivery, USA
+        price: 17.00
+        currency: USD
+
+  - name: AddressVerificationLookup
+    description: Per-lookup charge for US & Canada address verification
+    unit: lookup
+    serviceCategory: Address Verification
+    dimensions:
+      - verificationScope
+      - volumeTier
+    samplePrices:
+      - dimension: US & CA, 100–10k verifications (PAYG)
+        price: 0.05
+        currency: USD
+      - dimension: US & CA, 10k–100k verifications (PAYG)
+        price: 0.03
+        currency: USD
+      - dimension: US & CA, Essential plan overage
+        price: 0.02
+        currency: USD
+      - dimension: US & CA, Business plan overage
+        price: 0.01
+        currency: USD
+      - dimension: US & CA, Growth plan overage
+        price: 0.005
+        currency: USD
+
+  - name: InternationalAddressVerificationLookup
+    description: Per-lookup charge for international (245+ countries) address verification
+    unit: lookup
+    serviceCategory: Address Verification
+    dimensions:
+      - verificationScope
+      - volumeTier
+    samplePrices:
+      - dimension: International, PAYG
+        price: 0.06
+        currency: USD
+      - dimension: International, Essential plan overage
+        price: 0.02
+        currency: USD
+      - dimension: International, Business plan overage
+        price: 0.01
+        currency: USD
+      - dimension: International, Growth plan overage
+        price: 0.005
+        currency: USD
+
+  - name: BulkVerificationLookup
+    description: Per-lookup charge for bulk address verification batch jobs
+    unit: lookup
+    serviceCategory: Address Verification
+    dimensions:
+      - volumeTier
+    samplePrices:
+      - dimension: Essential plan overage
+        price: 0.07
+        currency: USD
+      - dimension: Business plan overage
+        price: 0.06
+        currency: USD
+      - dimension: Growth plan overage
+        price: 0.05
+        currency: USD
+
+  - name: PlatformSubscriptionFee
+    description: Fixed monthly subscription fee for address verification plan tiers
+    unit: month
+    serviceCategory: Address Verification
+    dimensions:
+      - plan
+      - billingCycle
+    samplePrices:
+      - dimension: US & CA Essential, monthly
+        price: 18.00
+        currency: USD
+      - dimension: US & CA Business, monthly
+        price: 40.00
+        currency: USD
+      - dimension: US & CA Growth, monthly
+        price: 200.00
+        currency: USD
+      - dimension: International Essential, monthly
+        price: 20.00
+        currency: USD
+      - dimension: International Business, monthly
+        price: 45.00
+        currency: USD
+      - dimension: International Growth, monthly
+        price: 225.00
+        currency: USD
+      - dimension: Bulk Essential, monthly
+        price: 70.00
+        currency: USD
+      - dimension: Bulk Business, monthly
+        price: 300.00
+        currency: USD
+      - dimension: Bulk Growth, monthly
+        price: 550.00
+        currency: USD
+
+principles:
+
+  - name: Visibility
+    description: >-
+      PostGrid provides per-piece and per-lookup cost transparency through
+      published pricing pages and a dashboard. Both test and live API key
+      environments are tracked separately, enabling cost attribution by
+      environment. Annual savings of 10% are surfaced at plan selection.
+
+  - name: Optimization
+    description: >-
+      Cost optimization strategies include: using annual billing for a 10%
+      discount on address verification subscriptions; using batch verification
+      endpoints to maximize throughput and reduce per-lookup cost at scale;
+      selecting higher-volume subscription tiers when overage charges would
+      exceed the tier upgrade cost; and negotiating enterprise custom rates
+      for predictable high-volume print mail operations.

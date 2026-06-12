@@ -1,0 +1,399 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+provider: PostGrid
+providerId: postgrid
+created: '2026-06-12'
+modified: '2026-06-12'
+reconciled: true
+
+type: freemium
+
+plans:
+
+  # ── Print & Mail API ──────────────────────────────────────────────────────
+
+  - name: Print & Mail Starter
+    description: >-
+      Free tier for the Print & Mail API. No monthly fee. Suitable for developers
+      and low-volume senders. Caps at 500 mailings per month; overages require
+      contacting sales.
+    type: freemium
+    url: https://www.postgrid.com/pricing-print-mail/
+    entries:
+      - name: Monthly Mailings
+        type: quota
+        limit: 500
+        timeFrame: month
+        price: 0.00
+        currency: USD
+      - name: Users
+        type: quota
+        limit: 1
+        timeFrame: month
+      - name: Templates
+        type: quota
+        limit: 10
+        timeFrame: month
+      - name: Address Book Entries
+        type: quota
+        limit: 10000
+        timeFrame: month
+      - name: Black & White Letter (First Class, USA)
+        type: metered
+        price: 1.019
+        currency: USD
+        unit: per piece
+      - name: Color Letter (First Class, USA)
+        type: metered
+        price: 1.179
+        currency: USD
+        unit: per piece
+      - name: 4x6 Postcard (First Class, USA)
+        type: metered
+        price: 0.862
+        currency: USD
+        unit: per piece
+      - name: Check
+        type: metered
+        price: 1.10
+        currency: USD
+        unit: per piece
+      - name: Certified Mail
+        type: metered
+        price: 6.69
+        currency: USD
+        unit: per piece
+      - name: Registered Mail
+        type: metered
+        price: 23.50
+        currency: USD
+        unit: per piece
+      - name: Express Delivery
+        type: metered
+        price: 17.00
+        currency: USD
+        unit: per piece
+
+  - name: Print & Mail Enterprise
+    description: >-
+      Custom enterprise tier for high-volume print & mail. Unlimited mailings,
+      users, and templates. Lowest guaranteed per-piece rates. Includes dedicated
+      account manager and priority support.
+    type: enterprise
+    url: https://www.postgrid.com/pricing-print-mail/
+    entries:
+      - name: Monthly Mailings
+        type: boolean
+        value: unlimited
+      - name: Users
+        type: boolean
+        value: unlimited
+      - name: Templates
+        type: boolean
+        value: unlimited
+      - name: Dedicated Account Manager
+        type: boolean
+        value: true
+      - name: Priority Support
+        type: boolean
+        value: true
+      - name: Per-Piece Rate
+        type: boolean
+        value: custom-lowest-guaranteed
+
+  # ── US & Canada Address Verification API ──────────────────────────────────
+
+  - name: Address Verification Essential (US & CA)
+    description: >-
+      Entry-level subscription for US & Canada address verification. Includes
+      2,000 lookups per month with pay-as-you-go overages.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 18.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 16.20
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 2000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.02
+        currency: USD
+        unit: per lookup
+      - name: Free Trial Credits
+        type: quota
+        limit: 500
+
+  - name: Address Verification Business (US & CA)
+    description: >-
+      Business subscription for US & Canada address verification. 10,000 lookups
+      per month with lower overage rates.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 40.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 36.00
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 10000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.01
+        currency: USD
+        unit: per lookup
+
+  - name: Address Verification Growth (US & CA)
+    description: >-
+      Growth subscription for US & Canada address verification. 50,000 lookups
+      per month.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 200.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 180.00
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 50000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.005
+        currency: USD
+        unit: per lookup
+
+  - name: Address Verification Enterprise (US & CA)
+    description: Custom pricing for high-volume address verification. Contact sales.
+    type: enterprise
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee
+        type: boolean
+        value: custom
+
+  # ── International Address Verification API ────────────────────────────────
+
+  - name: International Address Verification Essential
+    description: >-
+      Entry-level subscription for international address verification across
+      245+ countries. Includes 2,000 lookups per month.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 20.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 18.00
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 2000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.02
+        currency: USD
+        unit: per lookup
+
+  - name: International Address Verification Business
+    description: >-
+      Business subscription for international address verification. 10,000
+      lookups per month.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 45.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 40.50
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 10000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.01
+        currency: USD
+        unit: per lookup
+
+  - name: International Address Verification Growth
+    description: >-
+      Growth subscription for international address verification. 50,000 lookups
+      per month.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 225.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 202.50
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 50000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.005
+        currency: USD
+        unit: per lookup
+
+  # ── Bulk Address Verification ─────────────────────────────────────────────
+
+  - name: Bulk Address Verification Essential
+    description: >-
+      Entry-level subscription for bulk address verification. 1,000 lookups per
+      month. Optimized for batch processing workflows.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 70.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 63.00
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 1000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.07
+        currency: USD
+        unit: per lookup
+      - name: Free Trial Credits
+        type: quota
+        limit: 50
+
+  - name: Bulk Address Verification Business
+    description: >-
+      Business subscription for bulk address verification. 5,000 lookups per
+      month.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 300.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 270.00
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 5000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.06
+        currency: USD
+        unit: per lookup
+
+  - name: Bulk Address Verification Growth
+    description: >-
+      Growth subscription for bulk address verification. 10,000 lookups per
+      month.
+    type: paid
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: Platform Fee (Monthly)
+        type: quota
+        price: 550.00
+        currency: USD
+        timeFrame: month
+      - name: Platform Fee (Annual, per month)
+        type: quota
+        price: 495.00
+        currency: USD
+        timeFrame: month
+      - name: Included Lookups
+        type: quota
+        limit: 10000
+        timeFrame: month
+      - name: Overage Lookups
+        type: metered
+        price: 0.05
+        currency: USD
+        unit: per lookup
+
+  # ── Pay-As-You-Go (Address Verification) ─────────────────────────────────
+
+  - name: Address Verification Pay-As-You-Go
+    description: >-
+      No subscription required. Pay per verification with tiered volume pricing.
+      Includes a free trial of 100 bulk credits.
+    type: freemium
+    url: https://www.postgrid.com/pricing-address-verification/
+    entries:
+      - name: US & Canada (100–10k verifications)
+        type: metered
+        price: 0.05
+        currency: USD
+        unit: per verification
+      - name: US & Canada (10k–100k verifications)
+        type: metered
+        price: 0.03
+        currency: USD
+        unit: per verification
+      - name: International (100–10k verifications)
+        type: metered
+        price: 0.06
+        currency: USD
+        unit: per verification
+      - name: International (10k–100k verifications)
+        type: metered
+        price: 0.06
+        currency: USD
+        unit: per verification
+      - name: Free Trial Bulk Credits
+        type: quota
+        limit: 100

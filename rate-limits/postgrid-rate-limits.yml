@@ -1,0 +1,45 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: PostGrid
+providerId: postgrid
+created: '2026-06-12'
+modified: '2026-06-12'
+
+retryAfter: Retry-After
+throttled: 429
+
+limits:
+
+  - scope: Address Verification API (default)
+    metric: requests
+    limit: 5
+    timeFrame: second
+    description: >-
+      Default rate limit of 5 requests per second across all address
+      verification endpoints. Applies to both US & Canada and International
+      APIs. Batch endpoints are exempt and recommended for large-scale
+      processing.
+
+  - scope: Address Verification API (throughput)
+    metric: addresses
+    limit: 100
+    timeFrame: second
+    description: >-
+      Maximum throughput of 100 addresses per second when using batch
+      verification. Batch processing is the recommended approach for
+      high-volume address verification workloads.
+
+  - scope: Print & Mail API (test mode)
+    metric: requests
+    limit: null
+    timeFrame: null
+    description: >-
+      Test mode requests are isolated from live mode. No specific rate limit
+      is documented for test mode. Test API keys operate in a sandbox
+      environment where no physical mail is sent.
+
+notes: >-
+  Higher rate limits for the Address Verification API are available upon
+  request by contacting support@postgrid.com. The Print & Mail API does not
+  publicly document specific per-second or per-minute rate limits beyond the
+  sandbox/live key separation. Exceeding limits returns HTTP 429 responses.

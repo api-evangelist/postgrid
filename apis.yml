@@ -1,0 +1,136 @@
+aid: postgrid
+name: PostGrid
+description: >-
+  PostGrid is a physical mail automation platform that provides REST APIs for
+  sending printed letters, postcards, checks, and self-mailers at scale. It
+  offers a Print & Mail API that enables developers to programmatically trigger
+  and manage direct mail campaigns with full personalization and tracking
+  support. PostGrid also provides US & Canada Address Verification and
+  International Address Verification APIs covering 245+ countries for real-time
+  autocomplete, standardization, geocoding, and bulk batch verification. The
+  platform supports both test and live API environments, integrates natively with
+  Salesforce, HubSpot, Zapier, and Marketo, and handles postage, printing, and
+  delivery end-to-end.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Direct Mail
+  - Print & Mail
+  - Address Verification
+  - Address Validation
+  - Postcards
+  - Letters
+  - Checks
+  - Physical Mail
+  - Mail Automation
+  - Address Autocomplete
+  - Geocoding
+url: https://raw.githubusercontent.com/api-evangelist/postgrid/refs/heads/main/apis.yml
+created: '2026-06-12'
+modified: '2026-06-12'
+specificationVersion: '0.19'
+
+apis:
+
+  - aid: postgrid:print-mail-api
+    name: PostGrid Print & Mail API
+    description: >-
+      A REST API for programmatically sending letters, postcards, checks, and
+      self-mailers. Handles printing, postage, and delivery with support for
+      templates, contacts, tracking, webhooks, and both test and live modes.
+      Authenticated via x-api-key header.
+    humanURL: https://docs.postgrid.com/
+    baseURL: https://api.postgrid.com
+    tags:
+      - Direct Mail
+      - Letters
+      - Postcards
+      - Checks
+      - Self-Mailers
+      - Print
+      - Mail Automation
+    properties:
+      - type: Documentation
+        url: https://docs.postgrid.com/
+      - type: OpenAPI
+        url: https://postgrid.readme.io/llms.txt
+      - type: PythonSDK
+        url: https://github.com/postgrid/postgrid-python
+      - type: NodeSDK
+        url: https://github.com/postgrid/postgrid-node
+      - type: Examples
+        url: https://github.com/postgrid/postgrid-examples
+
+  - aid: postgrid:address-verification-api
+    name: PostGrid US & Canada Address Verification API
+    description: >-
+      A REST API for real-time address autocomplete, verification, and
+      standardization for US and Canadian addresses. Supports CASS-certified
+      validation, geocoding (latitude/longitude), freeform address parsing, and
+      batch verification for large-scale processing. Authenticated via x-api-key
+      header with a default rate limit of 5 requests per second.
+    humanURL: https://avdocs.postgrid.com/
+    baseURL: https://api.postgrid.com/addver
+    tags:
+      - Address Verification
+      - Address Validation
+      - Address Autocomplete
+      - CASS
+      - Geocoding
+      - US
+      - Canada
+    properties:
+      - type: Documentation
+        url: https://avdocs.postgrid.com/
+
+  - aid: postgrid:international-address-verification-api
+    name: PostGrid International Address Verification API
+    description: >-
+      A REST API for verifying, standardizing, and autocompleting addresses
+      across 245+ countries worldwide. Supports real-time lookups and bulk
+      verification workflows. Authenticated via x-api-key header.
+    humanURL: https://intdocs.postgrid.com/
+    baseURL: https://api.postgrid.com/addver
+    tags:
+      - Address Verification
+      - Address Validation
+      - International
+      - Global
+      - Address Autocomplete
+    properties:
+      - type: Documentation
+        url: https://intdocs.postgrid.com/
+
+common:
+  - type: Website
+    url: https://www.postgrid.com/
+  - type: Documentation
+    url: https://docs.postgrid.com/
+  - type: Developers
+    url: https://www.postgrid.com/developers/
+  - type: GitHubOrganization
+    url: https://github.com/postgrid
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/postgrid
+  - type: X
+    url: https://x.com/postgridinc
+  - type: Blog
+    url: https://www.postgrid.com/blog/
+  - type: Changelog
+    url: https://www.postgrid.com/updates-and-releases/
+  - type: Pricing
+    url: https://www.postgrid.com/pricing/
+  - type: StatusPage
+    url: https://status.postgrid.com/
+  - type: Support
+    url: https://www.postgrid.com/help-support/
+  - type: Plans
+    url: plans/postgrid-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/postgrid-rate-limits.yml
+  - type: FinOps
+    url: finops/postgrid-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
