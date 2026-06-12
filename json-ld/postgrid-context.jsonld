@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "aid": "https://api-evangelist.com/ns/aid",
+    "postgrid": "https://www.postgrid.com/",
+    "printMailAPI": "https://api.postgrid.com/",
+    "addressVerificationAPI": "https://api.postgrid.com/addver/",
+    "WebAPI": "WebAPI",
+    "Organization": "Organization",
+    "documentation": "documentation",
+    "name": "name",
+    "description": "description",
+    "url": "url",
+    "provider": "provider",
+    "termsOfService": "termsOfService",
+    "apiKey": "https://api-evangelist.com/ns/apiKey",
+    "letter": "https://www.postgrid.com/ns/letter",
+    "postcard": "https://www.postgrid.com/ns/postcard",
+    "check": "https://www.postgrid.com/ns/check",
+    "selfMailer": "https://www.postgrid.com/ns/selfMailer",
+    "contact": "https://www.postgrid.com/ns/contact",
+    "template": "https://www.postgrid.com/ns/template",
+    "addressVerification": "https://www.postgrid.com/ns/addressVerification",
+    "geocoding": "https://www.postgrid.com/ns/geocoding",
+    "tracking": "https://www.postgrid.com/ns/tracking",
+    "webhook": "https://www.postgrid.com/ns/webhook",
+    "testMode": "https://www.postgrid.com/ns/testMode",
+    "liveMode": "https://www.postgrid.com/ns/liveMode"
+  },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.postgrid.com/",
+      "name": "PostGrid",
+      "description": "PostGrid is a physical mail automation platform providing REST APIs for sending printed letters, postcards, checks, and self-mailers at scale, along with address verification APIs covering 245+ countries.",
+      "url": "https://www.postgrid.com/",
+      "sameAs": [
+        "https://github.com/postgrid",
+        "https://www.linkedin.com/company/postgrid",
+        "https://x.com/postgridinc"
+      ]
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://api.postgrid.com/",
+      "name": "PostGrid Print & Mail API",
+      "description": "A REST API for programmatically sending letters, postcards, checks, and self-mailers. Handles printing, postage, and delivery with support for templates, contacts, tracking, webhooks, and both test and live modes.",
+      "documentation": "https://docs.postgrid.com/",
+      "provider": {
+        "@id": "https://www.postgrid.com/"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://api.postgrid.com/addver/",
+      "name": "PostGrid Address Verification API",
+      "description": "REST APIs for real-time address autocomplete, verification, and standardization covering US, Canada, and 245+ countries worldwide. Supports CASS-certified validation, geocoding, and bulk batch verification.",
+      "documentation": "https://avdocs.postgrid.com/",
+      "provider": {
+        "@id": "https://www.postgrid.com/"
+      }
+    }
+  ]
+}
