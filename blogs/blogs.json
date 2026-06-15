@@ -4,5 +4,17 @@
   "description": "PostGrid blog covering physical mail automation, direct mail, address verification, and postal services.",
   "url": "https://www.postgrid.com/blog/",
   "rss": "https://www.postgrid.com/feed/",
-  "last_fetched": "2026-06-12"
+  "last_fetched": "2026-06-12",
+  "repo": "postgrid",
+  "feeds": [
+    {
+      "source": "https://x.com/postgridinc",
+      "feed_url": "https://x.com/postgridinc",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
