@@ -116,7 +116,7 @@ common:
     url: https://x.com/postgridinc
   - type: Blog
     url: https://www.postgrid.com/blog/
-  - type: Changelog
+  - type: ChangeLog
     url: https://www.postgrid.com/updates-and-releases/
   - type: Pricing
     url: https://www.postgrid.com/pricing/
