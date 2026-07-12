@@ -102,6 +102,8 @@ apis:
         url: https://intdocs.postgrid.com/
 
 common:
+  - type: DomainSecurity
+    url: security/postgrid-domain-security.yml
   - type: Website
     url: https://www.postgrid.com/
   - type: Documentation
