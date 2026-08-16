@@ -10,7 +10,7 @@
       "source": "https://www.postgrid.com/feed/",
       "feed_url": "https://www.postgrid.com/feed/",
       "title": "",
-      "saved": 0,
+      "saved": 12,
       "method": "feed"
     },
     {
@@ -18,9 +18,10 @@
       "feed_url": "https://x.com/postgridinc",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "none",
+      "error": "parse_failed"
     }
   ],
-  "fetched": "2026-08-06T14:08:46Z",
-  "post_count": 30
+  "fetched": "2026-08-15T12:11:08Z",
+  "post_count": 42
 }
