@@ -7,23 +7,21 @@
   "repo": "postgrid",
   "feeds": [
     {
-      "source": "https://www.postgrid.com/feed/",
-      "feed_url": "https://www.postgrid.com/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "feed",
-      "nature": "undetermined",
-      "nature_basis": null
-    },
-    {
       "source": "https://x.com/postgridinc",
       "feed_url": "https://x.com/postgridinc",
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://www.postgrid.com/feed/",
+      "feed_url": "https://www.postgrid.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 64,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,
