@@ -1,4 +1,4 @@
-# PostGrid (postgrid)
+# PostGrid
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,82 +66,122 @@
 
 PostGrid is a physical mail automation platform that provides REST APIs for sending printed letters, postcards, checks, and self-mailers at scale. It offers a Print & Mail API that enables developers to programmatically trigger and manage direct mail campaigns with full personalization and tracking support. PostGrid also provides US & Canada Address Verification and International Address Verification APIs covering 245+ countries for real-time autocomplete, standardization, geocoding, and bulk batch verification. The platform supports both test and live API environments, integrates natively with Salesforce, HubSpot, Zapier, and Marketo, and handles postage, printing, and delivery end-to-end.
 
-**APIs.json:** https://raw.githubusercontent.com/api-evangelist/postgrid/refs/heads/main/apis.yml
+**Areas:** Direct Mail · Print & Mail · Address Verification · Address Validation · Postcards · Letters · Checks · Physical Mail · Mail Automation · Address Autocomplete · Geocoding
 
-**Naftiko:** https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=postgrid-api-evangelist&utm_content=repo
+## PostGrid on APIs.io
 
-## Tags
+Everything profiled for PostGrid is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/postgrid/](https://apis.io/providers/postgrid/)** — or go straight to one of the APIs or properties below.
 
-Direct Mail, Print & Mail, Address Verification, Address Validation, Postcards, Letters, Checks, Physical Mail, Mail Automation, Address Autocomplete, Geocoding
+### APIs (3)
 
-## APIs
+- [PostGrid Print & Mail API](https://apis.io/apis/postgrid/print-mail-api/) — A REST API for programmatically sending letters, postcards, checks, and self-mailers. Handles printing, postage, and delivery with support for templates,…
+- [PostGrid US & Canada Address Verification API](https://apis.io/apis/postgrid/address-verification-api/) — A REST API for real-time address autocomplete, verification, and standardization for US and Canadian addresses. Supports CASS-certified validation,…
+- [PostGrid International Address Verification API](https://apis.io/apis/postgrid/international-address-verification-api/) — A REST API for verifying, standardizing, and autocompleting addresses across 245+ countries worldwide. Supports real-time lookups and bulk verification…
 
-### PostGrid Print & Mail API
+### Published properties
 
-A REST API for programmatically sending letters, postcards, checks, and self-mailers. Handles printing, postage, and delivery with support for templates, contacts, tracking, webhooks, and both test and live modes. Authenticated via `x-api-key` header.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Documentation:** https://docs.postgrid.com/
-- **Base URL:** https://api.postgrid.com
-- **Python SDK:** https://github.com/postgrid/postgrid-python
-- **Node.js SDK:** https://github.com/postgrid/postgrid-node
-- **Examples:** https://github.com/postgrid/postgrid-examples
+#### MCP servers (1)
 
-### PostGrid US & Canada Address Verification API
+Model Context Protocol servers that expose the API to agents.
 
-A REST API for real-time address autocomplete, verification, and standardization for US and Canadian addresses. Supports CASS-certified validation, geocoding, freeform address parsing, and batch verification. Default rate limit: 5 requests/second.
+- [postgrid](https://apis.io/servers/postgrid/postgrid/)
 
-- **Documentation:** https://avdocs.postgrid.com/
-- **Base URL:** https://api.postgrid.com/addver
+#### JSON-LD (1)
 
-### PostGrid International Address Verification API
+Linked-data contexts for the provider's vocabulary.
 
-A REST API for verifying, standardizing, and autocompleting addresses across 245+ countries worldwide. Supports real-time lookups and bulk verification workflows.
+- [Postgrid Context](https://apis.io/jsonld/postgrid/postgrid-context/)
 
-- **Documentation:** https://intdocs.postgrid.com/
-- **Base URL:** https://api.postgrid.com/addver
+#### Security (1)
 
-## Plans / Rate Limits / FinOps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Plans & Pricing:** [plans/postgrid-plans-pricing.yml](plans/postgrid-plans-pricing.yml)
-- **Rate Limits:** [rate-limits/postgrid-rate-limits.yml](rate-limits/postgrid-rate-limits.yml)
-- **FinOps:** [finops/postgrid-finops.yml](finops/postgrid-finops.yml)
+- [Postgrid Domain Security](https://apis.io/security/postgrid/postgrid-domain-security/)
 
-### Pricing Highlights
+#### Plans and pricing (1)
 
-- **Print & Mail Starter:** Free tier, up to 500 mailings/month. Letters from $1.019, postcards from $0.862, checks at $1.10 per piece.
-- **Print & Mail Enterprise:** Unlimited volume, custom lowest-guaranteed rates, dedicated account manager.
-- **Address Verification (US & CA):** Essential $18/mo (2k lookups), Business $40/mo (10k), Growth $200/mo (50k), Enterprise custom.
-- **International Address Verification:** Essential $20/mo (2k), Business $45/mo (10k), Growth $225/mo (50k).
-- **Pay-As-You-Go:** From $0.03–$0.06 per verification with no subscription required.
-- Annual billing saves 10% across all address verification plans.
+Published plans, tiers and prices.
 
-### Rate Limit Highlights
+- [Postgrid Plans Pricing](https://apis.io/plans/postgrid/postgrid-plans-pricing/)
 
-- Address Verification: 5 requests/second default; up to 100 addresses/second via batch endpoints.
-- Higher limits available on request via support@postgrid.com.
-- HTTP 429 returned when limits are exceeded.
+#### Rate limits (1)
 
-## Timestamps
+Published request limits.
 
-- **Created:** 2026-06-12
-- **Modified:** 2026-06-12
+- [Postgrid Rate Limits](https://apis.io/rate-limits/postgrid/postgrid-rate-limits/)
 
-## Common Properties
+#### FinOps (1)
 
-| Type | URL |
-|------|-----|
-| Website | https://www.postgrid.com/ |
-| Documentation | https://docs.postgrid.com/ |
-| Developers | https://www.postgrid.com/developers/ |
-| GitHub Organization | https://github.com/postgrid |
-| LinkedIn | https://www.linkedin.com/company/postgrid |
-| X (Twitter) | https://x.com/postgridinc |
-| Blog | https://www.postgrid.com/blog/ |
-| Changelog | https://www.postgrid.com/updates-and-releases/ |
-| Pricing | https://www.postgrid.com/pricing/ |
-| Status Page | https://status.postgrid.com/ |
-| Support | https://www.postgrid.com/help-support/ |
+What the API costs to run, by operation.
 
-## Maintainers
+- [Postgrid Finops](https://apis.io/finops/postgrid/postgrid-finops/)
 
-- **Kin Lane** — kin@apievangelist.com
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.postgrid.com/)
+- [Documentation](https://docs.postgrid.com/)
+- [Pricing](https://www.postgrid.com/pricing/)
+- [Support](https://www.postgrid.com/help-support/)
+- [Changelog](https://www.postgrid.com/updates-and-releases/)
+- [Blog](https://www.postgrid.com/blog/)
+- [GitHub](https://github.com/postgrid)
+- [Status](https://status.postgrid.com/)
+
+## API Evangelist rating
+
+**Kin Score 22.9** — emerging · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.3 |
+| Contract quality | 41.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
+
+**Agent readiness 27.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/postgrid/](https://apis.io/providers/postgrid/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PostGrid: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/postgrid/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
